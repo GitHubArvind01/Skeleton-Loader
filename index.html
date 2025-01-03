@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton Loader</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        .skeleton {
+            background: linear-gradient(90deg, #ececec 25%, #f6f6f6 50%, #ececec 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: 200% 0;
+            }
+            100% {
+                background-position: -200% 0;
+            }
+        }
+
+        /* Navbar Loader */
+        .navbar-skeleton {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-skeleton .logo-skeleton {
+            width: 120px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        .navbar-skeleton .links-skeleton {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-skeleton .link-skeleton {
+            width: 80px;
+            height: 20px;
+            border-radius: 5px;
+        }
+
+        .navbar-skeleton .linker {
+            display: flex;
+            gap: 20px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+        }
+
+        /* Hero Section Loader */
+        .hero-skeleton {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 40px;
+        }
+
+        .hero-skeleton .text-skeleton {
+            margin-bottom: -1rem;
+            width: 60%;
+        }
+
+        .hero-skeleton .text-line {
+            width: 100%;
+            height: 20px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .hero-skeleton .text-line.short {
+            width: 70%;
+        }
+
+        .hero-skeleton .buttons-skeleton {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .hero-skeleton .button-skeleton {
+            width: 190px;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .hero-skeleton .image-skeleton {
+            margin-top: 5rem;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+        }
+
+        @media screen and (min-width: 768px) {
+            .navbar-skeleton .link {
+                display: none;
+            }
+        }
+
+        /* Navbar Skeleton for Mobile */
+        @media screen and (max-width: 768px) {
+            .navbar-skeleton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px 20px;
+            }
+
+            .navbar-skeleton .logo-skeleton {
+                width: 120px;
+                height: 30px;
+            }
+
+            .navbar-skeleton .links-skeleton {
+                display: none;
+            }
+
+            .navbar-skeleton .link {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+
+        /* Hero Section Skeleton for Mobile */
+        @media screen and (max-width: 768px) {
+            .hero-skeleton {
+                margin-top: 5rem;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .hero-skeleton .text-skeleton {
+                width: 100%;
+                margin-top: -1rem;
+            }
+
+            .hero-skeleton .buttons-skeleton {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 15px;
+            }
+
+            .hero-skeleton .button-skeleton {
+                width: 200px;
+                height: 35px;
+            }
+
+            .hero-skeleton .image-skeleton {
+                width: 16rem;
+                height: 16rem;
+                display: block;
+            }
+        }
+
+        /* Additional Responsiveness for Tablets */
+        @media screen and (min-width: 769px) and (max-width: 1024px) {
+            .navbar-skeleton {
+                padding: 15px 30px;
+            }
+
+            .hero-skeleton {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 40px;
+            }
+
+            .hero-skeleton .text-skeleton {
+                width: 50%;
+            }
+
+            .hero-skeleton .image-skeleton {
+                width: 250px;
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <!-- Navbar Skeleton -->
+        <div class="navbar-skeleton">
+            <div class="skeleton logo-skeleton"></div>
+            <div class="links-skeleton">
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton link-skeleton"></div>
+                <div class="skeleton linker"></div>
+            </div>
+            <div class="skeleton link"></div>
+        </div>
+
+        <!-- Hero Section Skeleton -->
+        <div class="hero-skeleton">
+            <div class="text-skeleton">
+                <div class="skeleton text-line"></div>
+                <div class="skeleton text-line"></div>
+                <div class="skeleton text-line short"></div>
+                <div class="buttons-skeleton">
+                    <div class="skeleton button-skeleton"></div>
+                    <div class="skeleton button-skeleton"></div>
+                </div>
+            </div>
+            <div class="skeleton image-skeleton"></div>
+        </div>
+    </div>
+</body>
+</html>
